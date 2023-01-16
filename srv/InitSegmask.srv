@@ -1,0 +1,5 @@
+# request params
+sensor_msgs/Image color_image
+---
+# response params
+bool is_success

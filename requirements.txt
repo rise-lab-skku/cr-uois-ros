@@ -1,0 +1,9 @@
+torch==1.5.1
+torchvision==0.6.1
+opencv-python==4.6.0.66
+pypng
+matplotlib
+numpy
+scikit-image
+pyyaml
+rospkg

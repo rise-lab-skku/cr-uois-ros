@@ -7,8 +7,8 @@ import cv2
 import json
 import pybullet as p
 
-from .util import utilities as util_
-from . import data_augmentation
+from util import utilities as util_
+import data_augmentation
 
 NUM_VIEWS_PER_SCENE = 7
 

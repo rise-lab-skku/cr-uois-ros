@@ -1,3 +1,55 @@
+# Guide for ROS melodic
+> This is a guide for ROS melodic users created by [RISE Lab](https://github.com/rise-lab-skku). Author's original README starts from [here](#unseen-object-instance-segmentation-for-robotic-environments).
+## Installaion for ROS melodic
+It is highly recommended to use a virtual environment to install the dependencies. 
+```bash
+virtualenv -p python3.6 --system-site-packages venv
+```
+
+Activate the virtual environment
+```bash
+source venv/bin/activate
+```
+
+Install the dependencies
+```bash
+ pip install -r requirements.txt
+```
+
+## Download the models
+You can find the models [here](https://drive.google.com/uc?export=download&id=1D-eaiOgFq_mg8OwbLXorgOB5lrxvmgQd). Download and unzip the models in the `checkpoints` directory. The directory structure should look like this:
+```
+project
+├── checkpoints
+    ├── DepthSeedingNetwork_3D_TOD_checkpoint.pth
+    ├── RRN_OID_checkpoint.pth
+    └── RRN_TOD_checkpoint.pth
+├── src
+├── ...
+└── uois_3D_example.ipynb
+```
+
+## ROS node
+### Launch
+```bash
+roslauch uois_ros uois_server.launch
+```
+Node information is shown below.
+* Default node name: `uois_server`
+* Services
+    * ~init_segmask([uois_ros/InitSegmask](srv/InitSegmask.srv)): Region of interest (ROI) initialization
+        * Request
+            * color_image([sensor_msgs/Image](http://docs.ros.org/en/melodic/api/sensor_msgs/html/msg/Image.html)): Color image of the scene.
+        * Response
+            * is_success(bool): True if the model is successfully loaded.
+
+    * ~get_segmask([uois_ros/GetSegmask](srv/GetSegmask.srv)): Get the segmentation mask
+        * Request
+            * rgb_image([sensor_msgs/Image](http://docs.ros.org/en/melodic/api/sensor_msgs/html/msg/Image.html)): rgb image of the scene.
+            * xyz_image([sensor_msgs/Image](http://docs.ros.org/en/melodic/api/sensor_msgs/html/msg/Image.html)): xyz image of the scene.
+        * Response
+            * segmask_image([sensor_msgs/Image](http://docs.ros.org/en/melodic/api/sensor_msgs/html/msg/Image.html)): Segmentation mask of the scene. The value of each pixel is the object ID. The background is 0. Type: uint16.
+
 # Unseen Object Instance Segmentation for Robotic Environments
 
 <img src="gifs/pipeline.gif" height="200" />

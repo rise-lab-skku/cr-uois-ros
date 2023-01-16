@@ -7,10 +7,10 @@ import cv2
 from abc import ABC, abstractmethod
 
 # my libraries
-from .util import utilities as util_
-from . import networks
-from . import losses
-from . import cluster
+from util import utilities as util_
+import networks
+import losses
+import cluster
 
 BACKGROUND_LABEL = 0
 TABLE_LABEL = 1

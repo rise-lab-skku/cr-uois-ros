@@ -2,7 +2,7 @@ import torch
 import torch.nn as nn
 
 # My Libraries
-from .util import utilities as util_
+from util import utilities as util_
 
 
 def maxpool2x2(input, ksize=2, stride=2):

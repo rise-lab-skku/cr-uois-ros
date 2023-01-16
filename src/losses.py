@@ -2,7 +2,7 @@ import torch
 import torch.nn as nn
 
 # My libraries
-from . import cluster
+import cluster
 
 BACKGROUND_LABEL = 0
 TABLE_LABEL = 1

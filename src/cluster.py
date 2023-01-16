@@ -4,7 +4,7 @@ import torch
 from abc import ABC, abstractmethod
 
 # my libraries
-from .util import utilities as util_
+from util import utilities as util_
 
 
 ### Mean-Shift Clustering (PyTorch) ###

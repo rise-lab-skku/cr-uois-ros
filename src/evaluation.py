@@ -2,8 +2,8 @@ import numpy as np
 import cv2
 
 # My libraries
-from .util import munkres as munkres
-from .util import utilities as util_
+from util import munkres as munkres
+from util import utilities as util_
 
 BACKGROUND_LABEL = 0
 TABLE_LABEL = 1

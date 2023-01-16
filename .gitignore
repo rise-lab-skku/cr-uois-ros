@@ -21,3 +21,14 @@ dist/
 
 # Other random things
 *.tar.gz
+checkpoints
+
+# vscode
+.vscode/
+
+# venv
+venv/
+
+# config
+config/
+!config/ros.yaml

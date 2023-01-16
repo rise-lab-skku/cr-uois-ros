@@ -1,0 +1,6 @@
+# request params
+sensor_msgs/Image rgb_image
+sensor_msgs/Image xyz_image
+---
+# response params
+sensor_msgs/Image segmask_image

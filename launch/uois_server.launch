@@ -1,0 +1,5 @@
+<launch>
+  <node name="uois_server" pkg="uois_ros" type="ros_node.py" output="screen">
+    <rosparam command="load" file="$(find uois_ros)/config/ros.yaml" />
+  </node>
+</launch>

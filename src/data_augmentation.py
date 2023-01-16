@@ -4,7 +4,7 @@ import numpy as np
 import cv2
 
 # My Libraries
-from .util import utilities as util_
+from util import utilities as util_
 
 
 ##### Useful Utilities #####

@@ -8,9 +8,9 @@ from abc import ABC, abstractmethod
 from torch.utils.tensorboard import SummaryWriter
 
 # my libraries
-from .util import utilities as util_
-from . import losses as ls
-from . import cluster
+from util import utilities as util_
+import losses as ls
+import cluster
 
 BACKGROUND_LABEL = 0
 TABLE_LABEL = 1
