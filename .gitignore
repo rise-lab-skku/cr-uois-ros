@@ -30,5 +30,5 @@ checkpoints
 venv/
 
 # config
-config/
+config/roi_mask_image.npy
 !config/ros.yaml
